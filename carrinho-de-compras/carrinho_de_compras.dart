@@ -4,6 +4,14 @@ class CarrinhoDeCompras {
   CarrinhoDeCompras() {
     this.itens = [];
   }
+
+  void adiciona(Item item) {
+    this.itens.add(item);
+  }
+
+  List<Item> getItens() {
+    return itens;
+  }
 }
 
 class Item {
