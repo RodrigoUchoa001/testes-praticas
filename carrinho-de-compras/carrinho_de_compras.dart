@@ -12,6 +12,19 @@ class CarrinhoDeCompras {
   List<Item> getItens() {
     return itens;
   }
+
+  double maiorValor() {
+    if (itens.length == 0) return 0;
+    double maior = itens[0].getValorTotal();
+
+    for (Item item in itens) {
+      if (maior < item.getValorTotal()) {
+        maior = item.getValorTotal();
+      }
+    }
+
+    return maior;
+  }
 }
 
 class Item {
